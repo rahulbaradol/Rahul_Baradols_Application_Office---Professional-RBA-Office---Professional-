@@ -27,18 +27,17 @@ public class Rahul_Baradols_Application_Office_MC extends Application {
         }
     }
 
-    public static void main(String[] args) {
-        launch(args);
-    }
-
     @Override
     public void stop() {
-        Alert exit = new Alert(Alert.AlertType.INFORMATION);
+        Alert bye = new Alert(Alert.AlertType.INFORMATION);
+        bye.setTitle("RBA Office - Professional");
+        bye.setHeaderText(null);
+        bye.setContentText("THANKS for using Rahul Baradol's Application Office - Professional!! Good bye. See you soon.");
+        bye.showAndWait();
+    }
 
-        exit.setTitle("RBA Office - Professional");
-        exit.setHeaderText(null);
-        exit.setContentText("THANKS for using RBA(Rahul Baradol's Application) Office. \nHave a nice day. See you soon.");
-        exit.showAndWait();
+    public static void main(String[] args) {
+        launch(args);
     }
 
 }
