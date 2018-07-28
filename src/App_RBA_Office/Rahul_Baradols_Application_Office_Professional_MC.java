@@ -6,7 +6,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 
-public class Rahul_Baradols_Application_Office_MC extends Application {
+public class Rahul_Baradols_Application_Office_Professional_MC extends Application {
 
     @Override
     public void start(Stage ps) {

@@ -5,16 +5,16 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<StackPane fx:id="welcome" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App_RBA_Office.Java_Ct.Welcome_Ct">
+<StackPane fx:id="welcome" prefHeight="420.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App_RBA_Office.Java_Ct.Welcome_Ct">
    <children>
-      <AnchorPane onMouseClicked="#load_RBA_Office_Pro" prefHeight="400.0" prefWidth="600.0">
+      <AnchorPane onMouseClicked="#load_RBA_Office_Pro" prefHeight="420.0" prefWidth="660.0">
          <children>
-            <Label fx:id="heading" layoutX="67.0" layoutY="14.0" text="Rahul Baradol's Application Office - Professional" underline="true">
+            <Label fx:id="heading" layoutX="97.0" layoutY="14.0" text="Rahul Baradol's Application Office - Professional" underline="true">
                <font>
                   <Font size="22.0" />
                </font>
             </Label>
-            <Label fx:id="description" layoutX="255.0" layoutY="192.0" text="Click to Continue" />
+            <Label fx:id="description" layoutX="285.0" layoutY="202.0" text="Click to Continue" />
          </children>
       </AnchorPane>
    </children>

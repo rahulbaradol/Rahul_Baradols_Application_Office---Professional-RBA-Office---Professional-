@@ -93,7 +93,7 @@ public class Welcome_Ct implements Initializable {
                 ft.setOnFinished(event_FT -> {
                     try {
                         Stage stage = (Stage) welcome.getScene().getWindow();
-                        FXMLLoader loader = new FXMLLoader(getClass().getResource("/App_RBA_Office/FXML_Files/Rahul_Baradols_Application_Office.fxml"));
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("/App_RBA_Office/FXML_Files/Rahul_Baradols_Application_Professional_Office.fxml"));
                         Scene sc = new Scene(loader.load());
 
                         stage.setTitle("Rahul Baradol's Application Office - Professional");

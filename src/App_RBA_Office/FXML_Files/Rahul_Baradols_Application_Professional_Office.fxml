@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<StackPane fx:id="main" prefHeight="420.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App_RBA_Office.Java_Ct.Rahul_Baradols_Application_Office_Ct">
+<StackPane fx:id="main" prefHeight="420.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App_RBA_Office.Java_Ct.Rahul_Baradols_Application_Office_Professional_Ct">
    <children>
       <AnchorPane prefHeight="420.0" prefWidth="660.0" stylesheets="@../Design/Design.css">
          <children>
@@ -31,7 +31,7 @@
                 </Menu>
                 <Menu mnemonicParsing="false" text="View">
                   <items>
-                    <MenuItem fx:id="full_Screen_Mode" mnemonicParsing="false" onAction="#fullScreenMode" text="Full Screen Mode" />
+                    <MenuItem fx:id="mid_Screen_Mode" mnemonicParsing="false" onAction="#mid_Screen_Mode" text="Mid_Screen_Mode" />
                   </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Help">
