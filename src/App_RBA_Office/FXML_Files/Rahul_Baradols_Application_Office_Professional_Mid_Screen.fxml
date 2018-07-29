@@ -35,12 +35,12 @@
                         </Menu>
                         <Menu mnemonicParsing="false" text="View">
                             <items>
-                                <MenuItem fx:id="normal_Screen_Mode" mnemonicParsing="false" onAction="#normal_Screen_Mode" text="Normal Screen" />
+                                <MenuItem mnemonicParsing="false" onAction="#normal_Screen_Mode" text="Normal Screen" />
                             </items>
                         </Menu>
                         <Menu mnemonicParsing="false" text="Help">
                             <items>
-                                <MenuItem fx:id="ia_Mode" mnemonicParsing="false" onAction="#IA_Mode" text="IA Mode" />
+                                <MenuItem mnemonicParsing="false" onAction="#IA_Mode" text="IA Mode" />
                                 <MenuItem fx:id="about" mnemonicParsing="false" onAction="#about" text="About" />
                             </items>
                         </Menu>

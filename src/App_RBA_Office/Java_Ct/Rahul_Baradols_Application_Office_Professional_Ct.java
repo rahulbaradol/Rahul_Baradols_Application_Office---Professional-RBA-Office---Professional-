@@ -27,7 +27,7 @@ public class Rahul_Baradols_Application_Office_Professional_Ct implements Initia
     private StackPane main;
 
     @FXML
-    private MenuItem mid_Screen_Mode, ia_Mode, about;
+    private MenuItem about;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
