@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="341.0" prefWidth="347.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="137.0" layoutY="14.0" text="About" underline="true">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="68.0" text="Version 1.0" underline="true">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="103.0" text="With this calculator, you can waste no time! ">
+         <font>
+            <Font size="15.5" />
+         </font>
+      </Label>
+      <Label layoutX="16.0" layoutY="128.0" text="When you start it, it boots up immediately">
+         <font>
+            <Font size="15.5" />
+         </font>
+      </Label>
+      <Label layoutX="16.0" layoutY="154.0" text="without wasting any time! It also includes">
+         <font>
+            <Font size="15.5" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="179.0" text="some new features!">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="13.5" layoutY="273.0" text="This application is developed by">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="13.5" layoutY="298.0" text="Rahul Baradol">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

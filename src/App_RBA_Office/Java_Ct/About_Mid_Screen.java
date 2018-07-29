@@ -14,7 +14,7 @@ import javafx.util.Duration;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class About_Ct implements Initializable {
+public class About_Mid_Screen implements Initializable {
 
     @FXML
     private StackPane about;
@@ -42,9 +42,9 @@ public class About_Ct implements Initializable {
         ft.setOnFinished(event -> {
             try {
                 Stage stage = (Stage) about.getScene().getWindow();
-                Scene sc = new Scene(FXMLLoader.load(getClass().getResource("/App_RBA_Office/FXML_Files/Rahul_Baradols_Application_Professional_Office.fxml")));
+                Scene sc = new Scene(FXMLLoader.load(getClass().getResource("/App_RBA_Office/FXML_Files/Rahul_Baradols_Application_Office_Professional_Mid_Screen.fxml")));
 
-                stage.setTitle("Rahul Baradol's Application Office - Professional");
+                stage.setTitle("RBA Office");
                 stage.setScene(sc);
                 stage.setResizable(false);
                 stage.show();

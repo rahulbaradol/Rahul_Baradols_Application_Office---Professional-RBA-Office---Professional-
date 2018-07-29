@@ -21,7 +21,7 @@ import java.util.ResourceBundle;
 
 import static java.lang.System.exit;
 
-public class Rahul_Baradols_Application_Office_Professional_Ct implements Initializable {
+public class Rahul_Baradols_Application_Office_Professional_Mid_Screen_Ct implements Initializable {
 
     @FXML
     private StackPane main;
@@ -171,7 +171,7 @@ public class Rahul_Baradols_Application_Office_Professional_Ct implements Initia
         stage.show();
     }
 
-    public void mid_Screen_Mode() {
+    public void normal_Screen_Mode() {
         FadeTransition ft = new FadeTransition(Duration.seconds(2), main);
         ft.setFromValue(1);
         ft.setToValue(0);
@@ -179,7 +179,7 @@ public class Rahul_Baradols_Application_Office_Professional_Ct implements Initia
         ft.setOnFinished(event -> {
             try {
                 Stage stage = (Stage) main.getScene().getWindow();
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/App_RBA_Office/FXML_Files/Rahul_Baradols_Application_Office_Professional_Mid_Screen.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/App_RBA_Office/FXML_Files/Rahul_Baradols_Application_Professional_Office.fxml"));
                 Scene sc = new Scene(loader.load());
 
                 stage.setTitle("Rahul Baradol's Application Office - Professional");
@@ -246,7 +246,7 @@ public class Rahul_Baradols_Application_Office_Professional_Ct implements Initia
         ft.setOnFinished(event -> {
             try {
                 Stage stage = (Stage) main.getScene().getWindow();
-                Scene sc = new Scene(FXMLLoader.load(getClass().getResource("/App_RBA_Office/FXML_Files/About.fxml")));
+                Scene sc = new Scene(FXMLLoader.load(getClass().getResource("/App_RBA_Office/FXML_Files/About_Mid_Screen.fxml")));
 
                 stage.setTitle("RBA Office - About");
                 stage.setScene(sc);
@@ -288,4 +288,5 @@ public class Rahul_Baradols_Application_Office_Professional_Ct implements Initia
             exit(0);
         }
     }
+
 }

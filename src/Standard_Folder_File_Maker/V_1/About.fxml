@@ -11,7 +11,7 @@
             <Font size="17.0" />
          </font>
       </Label>
-      <Label layoutX="14.0" layoutY="64.0" text="Version 2.0" />
+      <Label layoutX="14.0" layoutY="64.0" text="Version 1.0" />
       <Label layoutX="14.0" layoutY="121.0" text="You can use Standard Folder/File Maker for">
          <font>
             <Font size="14.0" />
