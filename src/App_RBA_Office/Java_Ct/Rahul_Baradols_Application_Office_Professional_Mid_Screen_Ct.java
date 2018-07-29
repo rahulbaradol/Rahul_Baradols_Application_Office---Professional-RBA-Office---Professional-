@@ -27,7 +27,7 @@ public class Rahul_Baradols_Application_Office_Professional_Mid_Screen_Ct implem
     private StackPane main;
 
     @FXML
-    private MenuItem mid_Screen_Mode, ia_Mode, about, close;
+    private MenuItem normal_Screen_Mode, ia_Mode, about;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -172,6 +172,8 @@ public class Rahul_Baradols_Application_Office_Professional_Mid_Screen_Ct implem
     }
 
     public void normal_Screen_Mode() {
+        normal_Screen_Mode.setDisable(true);
+
         FadeTransition ft = new FadeTransition(Duration.seconds(2), main);
         ft.setFromValue(1);
         ft.setToValue(0);

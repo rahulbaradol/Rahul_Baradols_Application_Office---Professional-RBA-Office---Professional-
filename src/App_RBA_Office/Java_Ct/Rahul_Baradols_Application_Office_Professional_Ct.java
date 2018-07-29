@@ -27,7 +27,7 @@ public class Rahul_Baradols_Application_Office_Professional_Ct implements Initia
     private StackPane main;
 
     @FXML
-    private MenuItem mid_Screen_Mode, ia_Mode, about, close;
+    private MenuItem mid_Screen_Mode, ia_Mode, about;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -172,26 +172,41 @@ public class Rahul_Baradols_Application_Office_Professional_Ct implements Initia
     }
 
     public void mid_Screen_Mode() {
-        FadeTransition ft = new FadeTransition(Duration.seconds(2), main);
-        ft.setFromValue(1);
-        ft.setToValue(0);
+        Alert confirmation = new Alert(Alert.AlertType.CONFIRMATION);
+        confirmation.setTitle("RBA Office - Professional");
+        confirmation.setHeaderText(null);
+        confirmation.setContentText("Are you sure, you want to switch to Mid Screen mode?\n(Note - You must have at least 1000 x 670 size screen to use the Mid Screen mode properly)");
 
-        ft.setOnFinished(event -> {
-            try {
-                Stage stage = (Stage) main.getScene().getWindow();
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/App_RBA_Office/FXML_Files/Rahul_Baradols_Application_Office_Professional_Mid_Screen.fxml"));
-                Scene sc = new Scene(loader.load());
+        ButtonType yes = new ButtonType("Yes");
+        ButtonType no = new ButtonType("No");
+        confirmation.getButtonTypes().setAll(yes, no);
 
-                stage.setTitle("Rahul Baradol's Application Office - Professional");
-                stage.setScene(sc);
-                stage.setResizable(false);
-                stage.show();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        });
+        Optional<ButtonType> confirmationOptional = confirmation.showAndWait();
 
-        ft.play();
+        if (confirmationOptional.get() == yes) {
+            main.setDisable(true);
+
+            FadeTransition ft = new FadeTransition(Duration.seconds(2), main);
+            ft.setFromValue(1);
+            ft.setToValue(0);
+
+            ft.setOnFinished(event -> {
+                try {
+                    Stage stage = (Stage) main.getScene().getWindow();
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/App_RBA_Office/FXML_Files/Rahul_Baradols_Application_Office_Professional_Mid_Screen.fxml"));
+                    Scene sc = new Scene(loader.load());
+
+                    stage.setTitle("Rahul Baradol's Application Office - Professional");
+                    stage.setScene(sc);
+                    stage.setResizable(false);
+                    stage.show();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            });
+
+            ft.play();
+        }
     }
 
     public void IA_Mode() {
