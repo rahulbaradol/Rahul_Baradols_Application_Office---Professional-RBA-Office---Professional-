@@ -14,22 +14,17 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="question" focusColor="LIME" layoutX="27.0" layoutY="76.0" prefHeight="30.0" prefWidth="546.0" promptText="Type the question that you want to ask" unFocusColor="WHITE">
+      <JFXTextField fx:id="question" focusColor="LIME" layoutX="27.0" layoutY="76.0" onKeyPressed="#keyBoardFunctioning_Question" prefHeight="30.0" prefWidth="546.0" promptText="Type the question that you want to ask" unFocusColor="WHITE">
          <font>
             <Font size="14.0" />
          </font>
       </JFXTextField>
-      <JFXButton layoutX="452.0" layoutY="323.0" onAction="#Ask" prefHeight="63.0" prefWidth="134.0" text="Ask">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </JFXButton>
       <JFXButton layoutX="14.0" layoutY="323.0" onAction="#Clear" prefHeight="63.0" prefWidth="134.0" text="Clear">
          <font>
             <Font size="15.0" />
          </font>
       </JFXButton>
-      <JFXTextArea fx:id="answer" editable="false" focusColor="LIME" layoutX="27.0" layoutY="131.0" prefHeight="150.0" prefWidth="546.0" text="Successfully Logged in IA Mode&#10;Waiting for Questions............" unFocusColor="WHITE">
+      <JFXTextArea fx:id="answer" editable="false" focusColor="LIME" layoutX="27.0" layoutY="131.0" onKeyPressed="#keyBoardFunctioning_Answer" prefHeight="150.0" prefWidth="546.0" text="Successfully Logged in IA Mode&#10;Waiting for Questions............" unFocusColor="WHITE">
          <font>
             <Font size="13.0" />
          </font>

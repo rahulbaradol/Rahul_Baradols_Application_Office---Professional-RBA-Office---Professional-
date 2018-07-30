@@ -5,6 +5,8 @@ import com.jfoenix.controls.JFXTextField;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextInputDialog;
+import javafx.scene.input.KeyEvent;
+
 import java.util.Optional;
 
 public class IA_Mode_Ct {
@@ -15,31 +17,74 @@ public class IA_Mode_Ct {
     @FXML
     private JFXTextArea answer;
 
-    public void Ask() {
+    public void keyBoardFunctioning_Question(KeyEvent keyEvent) {
+        switch (keyEvent.getCode()) {
+            case ENTER:
+                question.setEditable(false);
+                Ask();
+                break;
+
+            case F2:
+                question.setEditable(true);
+                question.setText("");
+                break;
+
+            case F3:
+                answer.setText("Waiting for Questions.....");
+                break;
+
+            case F4:
+                question.setEditable(true);
+                question.setText("");
+                answer.setText("Waiting for Questions.....");
+                break;
+        }
+    }
+
+    public void keyBoardFunctioning_Answer(KeyEvent keyEvent) {
+        switch (keyEvent.getCode()) {
+            case F2:
+                question.setEditable(true);
+                question.setText("");
+                break;
+
+            case F3:
+                answer.setText("Waiting for Questions.....");
+                break;
+
+            case F4:
+                question.setEditable(true);
+                question.setText("");
+                answer.setText("Waiting for Questions.....");
+                break;
+        }
+    }
+
+    private void Ask() {
         String question_value = question.getText();
 
-        if(question_value.equals("About RBA Office") | question_value.equals("About Rahul Baradol's Office")) {
+        if(question_value.equals("About RBA Office") | question_value.equals("About Rahul Baradol's Application Office") | question_value.equals("RBA Office?") | question_value.equals("Rahul Baradol's Application Office?")) {
             answer.setText(answer.getText() + "\n\n Question occupied.\n\n Answer:\n " +
                                           "RBA Office or Rahul Baradol's Office contains all the updated applications of Rahul Baradol! \nIt is free to Use that's the cool part!\n\nAnswer Ends");
-        } else if(question_value.equals("About File Reader")) {
+        } else if(question_value.equals("About File Reader") | question_value.equals("File Reader?")) {
             answer.setText(answer.getText() + "\n\n Question occupied.\n\n Answer:\n " +
                     "It is a application developed by Rahul Baradol which reads the files that you specify! \nIn the next update the problem will be fixed that it will not read the media files and image files. \n\nAnswer Ends");
-        } else if(question_value.equals("About Folder File Maker") | question_value.equals("About FF Maker")) {
+        } else if(question_value.equals("About Folder File Maker") | question_value.equals("About FF Maker") | question_value.equals("Folder File Maker?") | question_value.equals("FF Maker?")) {
             answer.setText(answer.getText() + "\n\n Question occupied.\n\n Answer:\n " +
                     "It is a application developed by Rahul Baradol which you can create folders and files! \nIf you have many folders or files to create, then, you can use this application! \n\nAnswer Ends");
-        } else if(question_value.equals("About Standard Calculator")) {
+        } else if(question_value.equals("About Standard Calculator") | question_value.equals("Standard Calculator")) {
             answer.setText(answer.getText() + "\n\n Question occupied.\n\n Answer:\n " +
                     "It is a application developed by Rahul Baradol which can calculate numbers with the very nice user interface! \n\nAnswer Ends");
-        } else if(question_value.equals("About Standard Text Editor")) {
+        } else if(question_value.equals("About Standard Text Editor") | question_value.equals("Standard Text Editor")) {
             answer.setText(answer.getText() + "\n\n Question occupied.\n\n Answer:\n " +
                     "It is a application developed by Rahul Baradol which you can write your information for temporarily and remove it! \n\nAnswer Ends");
-        } else if(question_value.equals("About Digital Clock")) {
+        } else if(question_value.equals("About Digital Clock") | question_value.equals("Digital Clock?")) {
             answer.setText(answer.getText() + "\n\n Question occupied.\n\n Answer:\n " +
                     "It is a application developed by Rahul Baradol which you can know timing! \nIn this application you need to refresh to get the perfect time. But the cool part is that you can get the correct time if you are doing some event! \n\nAnswer Ends");
-        } else if(question_value.equals("About Table Detector")) {
+        } else if(question_value.equals("About Table Detector") | question_value.equals("Table Detector?")) {
             answer.setText(answer.getText() + "\n\n Question occupied.\n\n Answer:\n " +
                     "It is a application developed by Rahul Baradol which you can get Tables whichever you want! \nYou can get tables of also decimal numbers! \n\nAnswer Ends");
-        } else if(question_value.equals("About Age Calculator")) {
+        } else if(question_value.equals("About Age Calculator") | question_value.equals("Age Calculator?")) {
             answer.setText(answer.getText() + "\n\n Question occupied.\n\n Answer:\n " +
                     "It is a application developed by Rahul Baradol which you can get how old are you by just specifying your date of birth and the current year! \n\nAnswer Ends");
         } else if(question_value.equals("How are you?")) {
@@ -72,16 +117,16 @@ public class IA_Mode_Ct {
                 response.showAndWait();
             }
 
-        } else if(question_value.equals("Do you want pizza?")) {
+        } else if(question_value.equals("Do you want pizza?") | question_value.equals("do you want pizza?") | question_value.equals("Do you want pizza") | question_value.equals("do you want pizza")) {
             Alert response = new Alert(Alert.AlertType.INFORMATION);
             response.setTitle("RBA Office - IA Mode");
             response.setContentText("With extra sauce no cheese!");
             response.showAndWait();
-        } else if(question_value.equals("%Help%")) {
+        } else if(question_value.equals("%Help%") | question_value.equals("Help") | question_value.equals("help")) {
             answer.setText(answer.getText() + "\n\nHelp\n\nIA(Information Accessing) Mode is used to get additional information about Rahul Baradol's Applications! \n" +
                                           "This is available only in RBA Office, but, this may be released as a separate application on or the other day!\n\nHelp Ends");
         } else if(question_value.equals("About Standard Calculator - Professional") | question_value.equals("About Standard Calculator - Pro") |
-                         question_value.equals("About Standard Calculator Professional") | question_value.equals("About Standard Calculator Pro")) {
+                         question_value.equals("About Standard Calculator Professional") | question_value.equals("About Standard Calculator Pro") | question_value.equals("Standard Calculator - Professional?") | question_value.equals("Standard Calculator - Pro?")) {
             answer.setText(answer.getText() + "\n\n Question occupied.\n\n Answer:\n " +
                     "Standard Calculator - Professional (Pro) is a application developed by Rahul Baradol in  which you can use more customized and powerful Calculator!\n\nAnswer Ends");
         } else {
