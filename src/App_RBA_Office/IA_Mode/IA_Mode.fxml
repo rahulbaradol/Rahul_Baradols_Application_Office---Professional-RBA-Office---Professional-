@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXTextArea?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.control.Label?>
@@ -19,12 +18,7 @@
             <Font size="14.0" />
          </font>
       </JFXTextField>
-      <JFXButton layoutX="14.0" layoutY="323.0" onAction="#Clear" prefHeight="63.0" prefWidth="134.0" text="Clear">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </JFXButton>
-      <JFXTextArea fx:id="answer" editable="false" focusColor="LIME" layoutX="27.0" layoutY="131.0" onKeyPressed="#keyBoardFunctioning_Answer" prefHeight="150.0" prefWidth="546.0" text="Successfully Logged in IA Mode&#10;Waiting for Questions............" unFocusColor="WHITE">
+      <JFXTextArea fx:id="answer" editable="false" focusColor="LIME" layoutX="27.0" layoutY="131.0" onKeyPressed="#keyBoardFunctioning_Answer" prefHeight="242.0" prefWidth="546.0" text="Successfully Logged in IA Mode&#10;Waiting for Questions............" unFocusColor="WHITE">
          <font>
             <Font size="13.0" />
          </font>

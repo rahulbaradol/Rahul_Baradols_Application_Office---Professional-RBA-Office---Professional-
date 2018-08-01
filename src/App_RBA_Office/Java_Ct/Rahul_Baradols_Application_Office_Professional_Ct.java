@@ -9,6 +9,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextInputDialog;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -248,6 +249,54 @@ public class Rahul_Baradols_Application_Office_Professional_Ct implements Initia
                 error.showAndWait();
             }
         } catch (RuntimeException re) {
+            // Nothing happens here
+        }
+    }
+
+    public void IA_Mode_KeyBoard(KeyEvent keyEvent) {
+        switch (keyEvent.getCode()) {
+            case I:
+                Random random = new Random();
+                String[] letters = {"A", "a", "B", "b", "C", "c", "D", "d", "E", "e", "F", "f", "G", "g", "H", "h", "I", "i", "J", "j", "K", "k", "L", "l", "M", "m", "N", "n", "O", "o",
+                        "P", "p", "Q", "r", "R", "r", "S", "s", "T", "t", "U", "u", "V", "v", "W", "w", "X", "x", "Y", "y", "Z", "z"};
+
+                String random_letters = letters[random.nextInt(52)] + letters[random.nextInt(52)] + letters[random.nextInt(52)] +
+                        letters[random.nextInt(52)] + letters[random.nextInt(52)] + letters[random.nextInt(52)];
+
+                TextInputDialog tid = new TextInputDialog();
+                tid.setTitle("RBA Office - IA Mode - Confirmation");
+                tid.setContentText("Enter this code to login to IA(Information Accessing) Mode: " + random_letters);
+
+                Optional<String> op_string = tid.showAndWait();
+
+                try {
+                    if (op_string.get().equals(random_letters)) {
+                        try {
+                            Stage stage = new Stage();
+                            Scene sc = new Scene(FXMLLoader.load(getClass().getResource("/App_RBA_Office/IA_Mode/IA_Mode.fxml")));
+
+                            stage.setTitle("RBA Office - IA Mode");
+                            stage.setScene(sc);
+                            stage.setResizable(false);
+                            stage.show();
+                        } catch (Exception ep) {
+                            Alert error = new Alert(Alert.AlertType.ERROR);
+                            error.setTitle("RBA Office");
+                            error.setContentText("Error loading the file. \nCould not find the file.");
+                            error.showAndWait();
+                        }
+                    } else {
+                        Alert error = new Alert(Alert.AlertType.ERROR);
+
+                        error.setTitle("RBA Office - Professional - IA Mode - Confirmation");
+                        error.setHeaderText(null);
+                        error.setContentText("Wrong code");
+                        error.showAndWait();
+                    }
+                } catch (RuntimeException re) {
+                    // Nothing happens here
+                }
+                break;
         }
     }
 
